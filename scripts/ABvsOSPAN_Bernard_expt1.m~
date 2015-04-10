@@ -1,0 +1,64 @@
+% This program performs analysis on AB vs WM in expt 1
+
+% Clear the workspace
+%clc; clear all; close all;
+
+% Set the paths and load the files
+addpath '../data/expt_2'
+
+ab = load('ab.txt');
+wm = load('WM.txt');
+crt = load('CRT.txt');
+l1s = load('L1sparing.txt');
+t1_l1 = load('T1_L1.txt');
+t1_l3 = load('T1_L3.txt');
+t1_l5 = load('T1_L5.txt');
+t1_l8 = load('T1_L8.txt');
+t2_l1 = load('T2_L1.txt');
+t2_l3 = load('T2_L3.txt');
+t2_l5 = load('T2_L5.txt');
+t2_l8 = load('T2_L8.txt');
+
+% Check the distribution of WM
+%hist(wm);
+%pause;
+% 
+% % Compute the statistics in the data
+% lower_bound = 49;
+% upper_bound = 60;
+% wm_low = wm(find(wm >= lower_bound & wm < upper_bound));
+% ab_low = ab(find(wm >= lower_bound & wm < upper_bound));
+% crt_low = crt(find(wm >= lower_bound & wm < upper_bound));
+% mean_t1_l1_low = mean(t1_l1(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t1_l3_low = mean(t1_l3(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t1_l5_low = mean(t1_l5(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t1_l8_low = mean(t1_l8(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t2_l1_low = mean(t2_l1(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t2_l3_low = mean(t2_l3(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t2_l5_low = mean(t2_l5(find(wm >= lower_bound & wm < upper_bound)));
+% mean_t2_l8_low = mean(t2_l8(find(wm >= lower_bound & wm < upper_bound)));
+% % % 
+% % % mean_t1_low = [ mean_t1_l1_low mean_t1_l3_low mean_t1_l5_low mean_t1_l8_low];
+% % % mean_t2_low = [ mean_t2_l1_low mean_t2_l3_low mean_t2_l5_low mean_t2_l8_low];
+% % 
+% % % mean_t1_medium = [ mean_t1_l1_low mean_t1_l3_low mean_t1_l5_low mean_t1_l8_low];
+% % % mean_t2_medium = [ mean_t2_l1_low mean_t2_l3_low mean_t2_l5_low mean_t2_l8_low];
+% % 
+% % mean_t1_high = [ mean_t1_l1_low mean_t1_l3_low mean_t1_l5_low mean_t1_l8_low];
+% % mean_t2_high = [ mean_t2_l1_low mean_t2_l3_low mean_t2_l5_low mean_t2_l8_low];
+% % 
+
+
+ plot(mean_t1_low, 'o'); hold on ; plot(mean_t1_low,'k-'); title('Replication of Bernards plot in Experiment 1');hold on;
+ plot(mean_t1_medium, '*'); hold on ; plot(mean_t1_medium,'r-'); hold on;
+ plot(mean_t1_high, '^'); hold on ; plot(mean_t1_high,'m'); hold off;
+% 
+
+
+%plot( wm_low, ab_low, 'o'); ylabel('Attention Blink AB mag'); xlabel('Working Memory OSPAN Score');
+
+
+
+% Seggregate the data based on the statistics
+% Plot the distributions
+
